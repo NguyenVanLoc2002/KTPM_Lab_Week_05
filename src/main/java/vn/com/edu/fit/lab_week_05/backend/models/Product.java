@@ -17,6 +17,9 @@ public class Product {
     @Column(name = "price", nullable = false)
     private double price;
 
+    @OneToMany
+    private List<Order_product> orderProducts;
+
 
     public Product(String id, String name,  double price) {
         this.id = id;
